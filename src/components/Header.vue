@@ -1,6 +1,9 @@
 <template>
     <div class="topnavcontainer">
         <img src="../assets/premium_logo.png" width="15%" />
+<div style="text-align: right;  width:80%;cursor:pointer; font-weight:bolder;">
+        <h2 > MENU <a-icon type="menu" /> </h2>
+</div>
     </div>
 </template>
 
@@ -22,7 +25,9 @@ data(){
     position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-    width: 96%;
+  display:flex;
+  align-items: center;
+    width: 100%;
     padding: 10px 2% 10px 2%;
     top: 0;
     box-shadow: 0 4px 5px rgba(131, 131, 131, 0.575);

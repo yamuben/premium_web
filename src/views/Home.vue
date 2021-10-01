@@ -1,117 +1,61 @@
 <template>
   <div class="hello">
-    <Header/>
-    <MainDetails/>
- 
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <Header />
+    <MainDetails />
+
+    <a-layout-footer
+      style="
+        text-align: left;
+        background: #424446;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      "
+    >
+      <div style="display: flex; align-items: center">
+          <div style="width:85%;display: flex; align-items: center">
+        <h1 style="color: white; font-weight: bolder">QUATTRORUOTE</h1>
+        <h2 style="color: white">
+          &nbsp; Sitemap |&nbsp; Contatti |&nbsp; Redazionne
+        </h2>
+          </div>
+         <h1 style="color: white"> <a-icon type="facebook" />  <a-icon type="linkedin" /> <a-icon type="slack-square" /> <a-icon type="instagram" /></h1>
+      </div>
+      <hr />
+    </a-layout-footer>
   </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue"
-import Modal from "../components/Modal.vue"
-import MainDetails from "../components/MainDetails.vue"
+import Header from "../components/Header.vue";
+import Modal from "../components/Modal.vue";
+import MainDetails from "../components/MainDetails.vue";
 export default {
-  name: 'HelloWorld',
-  components:{
-    Header, MainDetails,Modal
+  name: "HelloWorld",
+  components: {
+    Header,
+    MainDetails,
+    Modal,
   },
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Benjamin Vue.js App',
+      msg: "Welcome to Benjamin Vue.js App",
       modalOpen: true,
-    }
+    };
   },
   methods: {
-        openModal() {
-            this.modalOpen = !this.modalOpen;
-        }    
-    }
-}
+    openModal() {
+      this.modalOpen = !this.modalOpen;
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -125,11 +69,11 @@ li {
 a {
   color: #42b983;
 }
-.hello{
-  height: 150vh;
+.hello {
+  height: 100%;
   width: 100%;
   display: block;
-  padding:0;
-  background: rgb(198, 198, 255);
-  }
+  padding: 0;
+  background: rgb(17, 17, 240);
+}
 </style>

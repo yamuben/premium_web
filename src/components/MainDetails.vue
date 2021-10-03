@@ -124,21 +124,23 @@ export default {
 }
 .sectionone {
   width: 35%;
-  height: 100%;
+  height: auto;
   padding: 20px;
   text-align:left;
   /* background: #cc9d9d; */
 }
 .sectiontwo {
   width: 60%;
-  height: 100%;
+  min-height: 40vh;
   background: #e5e5e5;
   padding: 20px;
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 350px;
+
+  min-height: 350px;
   padding: 0px 2% 0px 2%;
   background: #eeeeee;
 }
@@ -183,4 +185,57 @@ a{
     text-decoration: none;
     font-weight:bolder;
 }
+
+
+/* responsive styles */
+
+@media only screen and (max-width: 768px) {
+
+  
+    .container{
+        height: auto;
+    }
+
+    .smallcard{
+        width: 30%;
+        margin:5px;
+        height: auto;
+    }
+    .smallcardcontainer{
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        margin:0px;
+
+    }
+    .sectiontwo{
+        width: 65%;
+        padding:45px 5px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        height: auto;
+    }
+    .sectionone{
+        width: 100%;
+    }
+    .sectiontwo{
+        width: 100%;
+        height: auto;
+    }
+    .smallcardcontainer{
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+        padding: 0px 0px 0px  20%;
+    }
+    .smallcard{
+        width: 70%;
+        margin:15px;
+    }
+}
+
 </style>

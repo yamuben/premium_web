@@ -2,20 +2,13 @@
   <div class="hello">
     <Header />
     <MainDetails />
-
+<BodyLayout/>
     <a-layout-footer
-      style="
-        text-align: left;
-        background: #424446;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      "
+     class="footer"
     >
-      <div style="display: flex; align-items: center">
-          <div style="width:85%;display: flex; align-items: center">
-        <h1 style="color: white; font-weight: bolder">QUATTRORUOTE</h1>
+      <div  style="display: flex; text-align: center">
+          <div class="divQuat" style="width:85%;display: flex; text-align: center;">
+        <h1 style="color: white; font-weight: bolder;">QUATTRORUOTE</h1>
         <h2 style="color: white">
           &nbsp; Sitemap |&nbsp; Contatti |&nbsp; Redazionne
         </h2>
@@ -31,12 +24,13 @@
 import Header from "../components/Header.vue";
 import Modal from "../components/Modal.vue";
 import MainDetails from "../components/MainDetails.vue";
+import BodyLayout from "../components/BodyLayout.vue";
 export default {
   name: "HelloWorld",
   components: {
     Header,
     MainDetails,
-    Modal,
+    Modal,BodyLayout,
   },
   data() {
     return {
@@ -76,4 +70,36 @@ a {
   padding: 0;
   background: rgb(17, 17, 240);
 }
+.footer{
+      text-align: left;
+        background: #424446;
+        color: white;
+        /* bottom: 0; */
+        width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer{
+        height: auto;
+        position: inherit;
+    }
+    h1{
+        font-size:15px;
+        text-align:center;
+    }
+    h2{
+        font-size: 12px;
+        text-align:center;
+    }
+}
+
+@media only screen and (max-width:600px){
+div{
+    flex-wrap: wrap;
+    text-align: center;
+width: 100%;
+}
+    
+}
+
 </style>
